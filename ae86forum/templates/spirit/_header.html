@@ -1,0 +1,12 @@
+{# templates/spirit/_header.html #}
+
+{% extends "spirit/_header.html" %}
+{% block custom_header_logo %}
+  <img src="/media/defaults/default_prof_pic.jpg" alt="Profile Picture" style="height: 1.75rem; width: auto;">
+  <a
+    style="line-height: 3rem;
+    font-size: 1.75rem;
+    color: var(--st-header-logo);"
+    href="{% url "spirit:index" %}"
+  >Клуб любителей AE86</a>
+{% endblock %}

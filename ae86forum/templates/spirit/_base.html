@@ -1,0 +1,28 @@
+{% extends "spirit/_base.html" %}
+
+{% block custom_head_extra %}
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background: url('/media/wallpaper.jpg') center center no-repeat fixed;
+    background-size: cover;
+  }
+
+  .spirit_wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: rgb(18, 18, 18);
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.101);
+    min-height: 100vh;
+  }
+</style>
+{% endblock %}
