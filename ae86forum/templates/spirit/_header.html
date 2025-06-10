@@ -1,12 +1,23 @@
 {# templates/spirit/_header.html #}
 
 {% extends "spirit/_header.html" %}
+
 {% block custom_header_logo %}
+{% load static%}
+
   <img src="/media/defaults/default_prof_pic.jpg" alt="Profile Picture" style="height: 1.75rem; width: auto;">
   <a
     style="line-height: 3rem;
     font-size: 1.75rem;
-    color: var(--st-header-logo);"
+    color: var(--st-header-logo);
+    font-family: HeaderFont;"
     href="{% url "spirit:index" %}"
   >Клуб любителей AE86</a>
+
+  <style>
+    @font-face {
+    font-family: 'HeaderFont';
+    src: url("{% static 'spirit/font/TruenoBoldOutlineItalic-454Y.otf' %}") format('opentype');
+  }
+  </style>
 {% endblock %}

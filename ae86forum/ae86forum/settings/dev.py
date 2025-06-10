@@ -16,6 +16,7 @@ ADMINS = (("John", "john@example.com"),)  # Log email to console when DEBUG = Fa
 
 SECRET_KEY = "DEV"
 
+
 ALLOWED_HOSTS = ["127.0.0.1"]
 
 # INSTALLED_APPS.extend([
@@ -43,6 +44,9 @@ CACHES.update(
         },
     }
 )
+ST_EXTENDED_FONT = True
+
+LANGUAGE_CODE = 'ru'
 
 PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
 

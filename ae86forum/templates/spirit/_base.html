@@ -1,7 +1,9 @@
 {% extends "spirit/_base.html" %}
 
 {% block custom_head_extra %}
+{% load static %}
 <style>
+
   html, body {
     margin: 0;
     padding: 0;
@@ -24,5 +26,21 @@
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.101);
     min-height: 100vh;
   }
+@font-face {
+  font-family: 'Trueno';
+  src: url("{% static 'spirit/font/TruenoLight-E2pg.otf' %}") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Применяем Trueno ко всему тексту, но исключаем элементы с классами иконок */
+body, html, span, * {
+  font-family: 'Trueno', sans-serif;
+}
+
+/* Не трогаем элементы, использующие FontAwesome или другие иконки */
+[class^="fa"], [class*=" fa"], .fa, .fa-solid, .fa-icon, .icon, [data-icon], .material-icons {
+  font-family: 'FontAwesome' !important; /* или 'FontAwesome' — если явно знаешь */
+}
 </style>
 {% endblock %}
