@@ -42,5 +42,38 @@ body, html, span, * {
 [class^="fa"], [class*=" fa"], .fa, .fa-solid, .fa-icon, .icon, [data-icon], .material-icons {
   font-family: 'FontAwesome' !important; /* или 'FontAwesome' — если явно знаешь */
 }
+
+  /* Адаптация под мобильные устройства */
+  @media (max-width: 768px) {
+    body {
+      background: #111; /* можно убрать фон-картинку */
+    }
+
+    .spirit_wrapper {
+      padding: 5px 10px;
+      border-radius: 0;
+      box-shadow: none;
+      max-width: 100%;
+      background-color: transparent;
+    }
+
+    footer {
+      position: static;
+      margin: 10px auto;
+      text-align: center;
+      background-color: transparent;
+      box-shadow: none;
+      color: #ccc;
+    }
+
+    header, nav {
+      font-size: 14px;
+    }
+
+    /* Скрыть или упростить элементы */
+    .sidebar, .extra-panel {
+      display: none;
+    }
+  }
 </style>
 {% endblock %}

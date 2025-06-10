@@ -1,7 +1,12 @@
 {% load forum_stats %}
 
 {% block custom_spirit_footer %}
-  <footer style="
+  <footer class="custom-footer">
+    {% forum_stats %}
+  </footer>
+
+  <style>
+    .custom-footer {
       position: fixed;
       bottom: 20px;
       left: 20px;
@@ -13,7 +18,22 @@
       box-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
       max-width: 300px;
       font-size: 14px;
-    ">
-    {% forum_stats %}
-  </footer>
+    }
+
+    @media (max-width: 768px) {
+      .custom-footer {
+        position: static;
+        margin: 20px auto 0 auto;
+        display: block;
+        width: 90%;
+        max-width: none;
+        background-color: transparent;
+        box-shadow: none;
+        text-align: center;
+        color: #aaa;
+        font-size: 13px;
+        padding: 5px 0;
+      }
+    }
+  </style>
 {% endblock %}
