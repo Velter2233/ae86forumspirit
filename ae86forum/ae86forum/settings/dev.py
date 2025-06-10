@@ -18,6 +18,10 @@ SECRET_KEY = "DEV"
 
 
 ALLOWED_HOSTS = ["ae86forumspirit.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["ae86forumspirit.onrender.com"]
+CSRF_ALLOWED_ORIGINS = ["ae86forumspirit.onrender.com"]
+CORS_ORIGINS_WHITELIST = ["ae86forumspirit.onrender.com"]
+
 
 # INSTALLED_APPS.extend([
 #    'debug_toolbar',
