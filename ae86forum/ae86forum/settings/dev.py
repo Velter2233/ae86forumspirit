@@ -17,7 +17,11 @@ ADMINS = (("John", "john@example.com"),)  # Log email to console when DEBUG = Fa
 SECRET_KEY = "DEV"
 
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["ae86forumspirit.onrender.com", "127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://ae86forumspirit.onrender.com"]
+CSRF_ALLOWED_ORIGINS = ["https://ae86forumspirit.onrender.com"]
+CORS_ORIGINS_WHITELIST = ["https://ae86forumspirit.onrender.com"]
+
 
 # INSTALLED_APPS.extend([
 #    'debug_toolbar',
