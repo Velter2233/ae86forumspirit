@@ -2,6 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 
+from .views import custom_register
 
 from spirit.user.auth.views import register
 from django.contrib.auth.decorators import login_required
@@ -15,10 +16,12 @@ import spirit.urls
 admin.site.login = login_required(admin.site.login)
 
 urlpatterns = [
+    path('register/', custom_register, name='custom_register'),
+    path('register/', custom_register, name='custom_register'),
     path("", include(spirit.urls)),
     path('custom-home/', home_with_category, name='custom_home'),
     re_path(r"^admin/", admin.site.urls),
-    path("user/register/", register, {"form_class": CustomRegistrationForm}, name="spirit_user_register"),
+
 ]
 
 if settings.DEBUG:
