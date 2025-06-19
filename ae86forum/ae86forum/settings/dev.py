@@ -22,6 +22,11 @@ CSRF_TRUSTED_ORIGINS = ["https://ae86forumspirit.onrender.com"]
 CSRF_ALLOWED_ORIGINS = ["https://ae86forumspirit.onrender.com"]
 CORS_ORIGINS_WHITELIST = ["https://ae86forumspirit.onrender.com"]
 
+RECAPTCHA_PUBLIC_KEY = '6LdXjWYrAAAAAP5mQ1B7AxtWXxaHWtG-2PUro1fx'
+RECAPTCHA_PRIVATE_KEY = '6LdXjWYrAAAAACtD2ESijyUzJPfKt-aXB0nk0G1Y'
+RECAPTCHA_REQUIRED_SCORE = 0.75  # Для reCAPTCHA v3 (опционально)
+
+
 
 # INSTALLED_APPS.extend([
 #    'debug_toolbar',
