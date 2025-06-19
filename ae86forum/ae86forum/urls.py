@@ -17,7 +17,7 @@ urlpatterns = [
     path("", include(spirit.urls)),
     path('custom-home/', home_with_category, name='custom_home'),
     re_path(r"^admin/", admin.site.urls),
-    path("user/auth/register/", register, {"form_class": CustomRegistrationForm}, name="spirit:user:register"),
+    path("templates/spirit/user/auth/register/", register, {"form_class": CustomRegistrationForm}, name="spirit:user:register"),
 ]
 
 if settings.DEBUG:
